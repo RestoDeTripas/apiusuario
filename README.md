@@ -14,28 +14,22 @@ Esta API se destina a projetos que precisam de um serviço centralizado de geren
 - Maven — conforme arquivo `pom.xml` presente na raiz  
 - Estrutura de pastas padrão de projetos Java (fonte em `src/`)  
 
-## Como usar / Instalação
+## 🔧 Como rodar localmente  
 
-1. Clone o repositório  
-   ```bash
-   git clone https://github.com/RestoDeTripas/apiusuario.git
+Para executar a API localmente, siga estes passos:
+
+```bash
+# 1. Clone o repositório
+git clone https://github.com/RestoDeTripas/apiusuario.git
+
+# 2. Acesse o diretório do projeto
 cd apiusuario
+
+# 3. Compile e gere o build com Maven
 mvn clean install
-mvn spring-boot:run   # ou o comando equivalente conforme sua configuração
 
-curl -X POST http://localhost:8080/usuarios \
-  -H "Content-Type: application/json" \
-  -d '{
-        "nome": "João Silva",
-        "email": "joao@example.com",
-        "senha": "********"
-      }'
-
-apiusuario/
-├── pom.xml
-├── mvnw     # wrapper do Maven
-├── src/
-│   └── main/
+# 4. Execute a aplicação
+mvn spring-boot:run  # ou o comando equivalente conforme sua configuração
 │       ├── java/       # código-fonte Java
 │       └── resources/  # configurações, application.properties, etc
 ├── .gitignore
