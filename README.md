@@ -2,7 +2,7 @@
 
 ## O que é
 
-`apiusuario` é um micro-serviço de backend (API REST) desenvolvido em Java, cujo objetivo é gerenciar operações relacionadas a usuários — por exemplo: criação, leitura, atualização e deleção de dados de usuário. É parte do conjunto de ferramentas do grupo “RestoDeTripas”.
+`apiusuario` é um micro-serviço de backend (API REST) desenvolvido em Java, cujo objetivo é gerenciar operações relacionadas a usuários — por exemplo: criação, leitura, atualização e deleção de dados de usuário. 
 
 ## Para quem é / Em que contexto usar
 
