@@ -1,5 +1,4 @@
 # apiusuario
-# apiusuario
 
 ## O que é
 
