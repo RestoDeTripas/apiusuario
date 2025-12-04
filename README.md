@@ -1,42 +1,50 @@
-# apiusuario
+# 💾 APIusuario: Serviço REST de Gerenciamento de Usuários (CRUD)
 
-## O que é
+![Badge do status do build (ex: Passing)](https://img.shields.io/badge/Status-Funcional-brightgreen) 
+![Badge de Linguagem (Java)](https://img.shields.io/badge/Linguagem-Java-red) 
+![Badge de Framework (Spring Boot)](https://img.shields.io/badge/Framework-Spring%20Boot-green)
+---
 
-`apiusuario` é um micro-serviço de backend (API REST) desenvolvido em Java, cujo objetivo é gerenciar operações relacionadas a usuários — por exemplo: criação, leitura, atualização e deleção de dados de usuário.
+## 📄 Sobre o Projeto
 
-## Para quem é / Em que contexto usar
+**`apiusuario`** é um **micro-serviço backend (API RESTful)** desenvolvido em **Java** (utilizando o framework Spring Boot), projetado para fornecer um serviço centralizado e padronizado para as operações básicas de **CRUD** (Create, Read, Update, Delete) de usuários em um banco de dados SQL.
 
-Esta API se destina a projetos que precisam de um serviço centralizado de gerenciamento de usuários — seja para sistemas web, mobile ou microserviços — de maneira simples, padronizada e em Java.  
+### O Conceito CRUD
 
-## Tecnologias usadas
+Esta API implementa o ciclo de vida completo de uma entidade `Usuario`:
 
-- Java (versão compatível com o projeto)  
-- Maven — conforme arquivo `pom.xml` presente na raiz  
-- Estrutura de pastas padrão de projetos Java (fonte em `src/`)  
+| Operação | Método HTTP | Ação |
+| :--- | :--- | :--- |
+| **C**reate | `POST` | Cria um novo usuário. |
+| **R**ead | `GET` | Busca um ou todos os usuários. |
+| **U**pdate | `PUT` | Atualiza um usuário existente. |
+| **D**elete | `DELETE` | Remove um usuário. |
 
-## Como usar / Instalação
+---
 
-1. Clone o repositório  
-   ```bash
-   git clone https://github.com/RestoDeTripas/apiusuario.git
+## ⚙️ Tecnologias Principais
+
+* **Linguagem:** Java (JDK 17+)
+* **Framework:** Spring Boot 3+
+* **Build Tool:** Apache Maven
+* **Persistência:** Spring Data JPA (para abstração do SQL)
+* **Banco de Dados:** Compatível com qualquer SQL (configurado via `application.properties`)
+
+---
+
+## 🚀 Configuração e Execução Local
+
+Siga os passos abaixo para clonar o repositório e rodar a API em sua máquina local.
+
+### Pré-requisitos
+
+Certifique-se de ter instalado:
+1.  **Java Development Kit (JDK)**
+2.  **Apache Maven**
+3.  Uma instância de banco de dados SQL (ex: MySQL, PostgreSQL, H2) rodando ou configurada.
+
+### 1. Clonar o Repositório
+
+```bash
+git clone [https://github.com/RestoDeTripas/apiusuario.git](https://github.com/RestoDeTripas/apiusuario.git)
 cd apiusuario
-mvn clean install
-mvn spring-boot:run   # ou o comando equivalente conforme sua configuração
-
-curl -X POST http://localhost:8080/usuarios \
-  -H "Content-Type: application/json" \
-  -d '{
-        "nome": "João Silva",
-        "email": "joao@example.com",
-        "senha": "********"
-      }'
-
-apiusuario/
-├── pom.xml
-├── mvnw     # wrapper do Maven
-├── src/
-│   └── main/
-│       ├── java/       # código-fonte Java
-│       └── resources/  # configurações, application.properties, etc
-├── .gitignore
-└── README.md  # este arquivo
